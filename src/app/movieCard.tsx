@@ -1,4 +1,3 @@
-"use client";
 import type { movieData } from "@/app/types/movie";
 import style from "./page.module.css";
 import Link from "next/link";
