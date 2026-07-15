@@ -13,7 +13,7 @@ const MovieCard = ({ movie }: Props) => {
       <img
         className={style.imageStyle}
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-        alt="movie.title"
+        alt={movie.title}
       />
       <div className={style.cardDetail}>
         <div className={style.cardTitle}>{movie.title}</div>

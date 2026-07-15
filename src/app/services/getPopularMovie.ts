@@ -3,7 +3,7 @@ import type { movieData } from "@/app/types/movie";
 
 const getPopularMovie = async (): Promise<movieData[]> => {
   const response = await fetch(
-    `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&langage=ja-JP`,
+    `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=ja-JP`,
   );
   if (!response.ok) {
     throw new Error("情報の取得に失敗しました");

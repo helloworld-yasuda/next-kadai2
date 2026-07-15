@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import getPopularMovie from "@/app/services/getPupularMovie";
+import getPopularMovie from "@/app/services/getPopularMovie";
 import MovieCard from "./movieCard";
 
 const Home = async () => {
