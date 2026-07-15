@@ -1,4 +1,4 @@
-const API_KEY = process.env.NEXT_PUBLIC_MOVIE_API;
+const API_KEY = process.env.MOVIE_API;
 import type { MovieData } from "@/app/types/movie";
 
 const getPopularMovie = async (): Promise<MovieData[]> => {

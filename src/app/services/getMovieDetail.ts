@@ -1,4 +1,4 @@
-const API_KEY = process.env.NEXT_PUBLIC_MOVIE_API;
+const API_KEY = process.env.MOVIE_API;
 
 const getMovieDetail = async (id: string) => {
   const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=ja-JP`;
