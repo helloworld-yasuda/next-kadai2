@@ -1,9 +1,9 @@
-import type { movieData } from "@/app/types/movie";
+import type { MovieData } from "@/app/types/movie";
 import style from "./page.module.css";
 import Link from "next/link";
 
 type Props = {
-  movie: movieData;
+  movie: MovieData;
 };
 
 const MovieCard = ({ movie }: Props) => {
