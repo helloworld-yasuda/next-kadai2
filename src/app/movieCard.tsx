@@ -1,6 +1,7 @@
 import type { MovieData } from "@/app/types/movie";
 import style from "./page.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 type Props = {
   movie: MovieData;
@@ -9,9 +10,11 @@ type Props = {
 const MovieCard = ({ movie }: Props) => {
   return (
     <Link href={`/movies/${movie.id}`} className={style.cardContainer}>
-      <img
+      <Image
         className={style.imageStyle}
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+        width={282}
+        height={423}
         alt={movie.title}
       />
       <div className={style.cardDetail}>

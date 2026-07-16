@@ -1,6 +1,7 @@
 import style from "@/app/page.module.css";
 import type { MovieData } from "@/app/types/movie";
 import Link from "next/link";
+import Image from "next/image";
 
 type Props = {
   movie: MovieData;
@@ -13,9 +14,11 @@ const MovieDetail = ({ movie }: Props) => {
         ← Back
       </Link>
       <div className={style.detailContainer}>
-        <img
+        <Image
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
           alt={`${movie.title}`}
+          width={400}
+          height={600}
         />
         <div>
           <div className={style.movieDetailContainer}>
