@@ -1,0 +1,31 @@
+import type { MovieData } from "@/app/types/movie";
+import style from "./page.module.css";
+import Link from "next/link";
+import Image from "next/image";
+
+type Props = {
+  movie: MovieData;
+};
+
+const MovieCard = ({ movie }: Props) => {
+  return (
+    <Link href={`/movies/${movie.id}`} className={style.cardContainer}>
+      <Image
+        className={style.imageStyle}
+        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+        width={282}
+        height={423}
+        alt={movie.title}
+      />
+      <div className={style.cardDetail}>
+        <div className={style.cardTitle}>{movie.title}</div>
+        <div className={style.infoContainer}>
+          <div className={style.cardInfo}>{movie.release_date}</div>
+          <div className={style.Voteaverage}>☆{movie.vote_average}</div>
+        </div>
+      </div>
+    </Link>
+  );
+};
+
+export default MovieCard;
